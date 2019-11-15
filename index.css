@@ -1,0 +1,271 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400|Open+Sans:700);
+
+
+* {box-sizing: border-box;}
+
+body {
+    background-image: url("/img/background.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-attachment: local;
+}
+
+body,html {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+section.text {
+  width: 100%;
+  min-width: 388px;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+h1, h3 {
+  transform: matrix(1, -0.20, 0, 1, 0, 0);
+  -ms-transform: matrix(1, -0.20, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, -0.20, 0, 1, 0, 0);
+  line-height: 1;
+}
+
+h1 {
+  font-family: "Oswald", Sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 70px;
+  text-shadow: 4px 5px #888888c7, 6px 7px #555555c7;
+}
+
+h1 span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+span.star {
+  font-size: 20px;
+}
+
+h3 {
+  font-family: "Open Sans", Sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-bottom: -10px;  
+  position: relative;
+}
+
+h3:before, h3:after {
+  content: " ";
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  border-top: 2px solid #888888;
+  border-bottom: 2px solid #888888;
+}
+
+h3:before {
+  margin: 5px 0 0 -110px;
+}
+
+h3:after {
+  margin: 5px 0 0 10px;
+}
+
+.main-content {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.copyright {color: #DDD; text-align: right; font-size: 0.7vw; margin-right: 2.5%;/*margin matches button margin*/}
+
+.title {
+    font-size: 5vw;
+    font-weight: 400;
+    cursor: default;
+    color: #DDD;
+}
+
+.shadow {
+  animation: textshadow 8s infinite alternate; 
+}       
+
+a {
+    width: 45%;
+    margin: 1.5%;
+    padding: 1% 0;
+    border-radius: 6px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 0.9vw;
+    color: rgb(170, 170, 170);
+    text-decoration: none;
+    float: left;
+    transition: all 0.2s ease-in-out;
+    background: rgba(104, 104, 104, 0.7);
+}
+
+a:hover {color: white;}
+
+a.discord:hover::before {
+  content: "";
+  background-image: url(./img/discord.png);
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+a.steam:hover::before {
+  content: "";
+  background-image: url(./img/steam.png);
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+a.twitter:hover::before {
+  content: "";
+  background-image: url(./img/twitter.png);
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+a.instagram:hover::before {
+  content: "";
+  background-image: url(./img/instagram.png);
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+a.twitch:hover::before {
+  content: "";
+  background-image: url(./img/twitch.png);
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+a.youtube:hover::before {
+  content: "";
+  background-image: url(./img/youtube.png);
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+a.discord:hover {background: #7289DA; border-color: rgb(92, 110, 175); box-shadow: 0 0 2em #7289DA; position: relative;}
+a.steam:hover {background: #003166; border-color: #002750; box-shadow: 0 0 2em #1B2838; position: relative;}
+a.twitter:hover {background: #1DA1F3; border-color: rgb(23, 137, 207); box-shadow: 0 0 2em #1DA1F3; position: relative;}
+a.instagram:hover {background: rgb(185, 0, 161); border-color: rgb(131, 0, 113); box-shadow: 0 0 2em rgb(177, 0, 184); position: relative;}
+a.twitch:hover {background: #6441A4; border-color: rgb(68, 45, 112); box-shadow: 0 0 2em #6441A4; position: relative;}
+a.youtube:hover {background: #CD201F; border-color: rgb(158, 22, 22); box-shadow: 0 0 2em #CD201F; position: relative;}
+
+@media screen and (orientation: portrait) {
+    .title {font-size: 15vw;}
+    .copyright {font-size: 4vw;}
+    a {font-size: 4vw;}
+}
+
+.embed-responsive {
+  opacity: 0.3;
+  position: fixed;
+  display: inline;
+}
+/* Explosion */
+.explosion-canvas {
+    width: 800px;
+    height: 450px;
+    position: relative;
+}
+                    
+.explosion {
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+.explosion-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    height: 100%;
+}
+                    
+.explosion-line {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+@keyframes expl-line {
+    0%   {width:  0%;left: 0%;opacity:100;}
+    45%  {width: 25%;opacity:100;}
+    90% {width:   0%;left:50%;opacity:60;}
+    95% {opacity:0;}
+    100% {opacity:0;}
+}
+
+@keyframes textshadow {
+	0%   { text-shadow: 1px 1px 0px #ffffff2f }
+	10%   { text-shadow: 3px 3px 2px #ffffff2f }
+	20%  { text-shadow: 9px 10px 6px #ffffff2f }
+	40%  { text-shadow: 10px 15px 6px #ffffff2f }
+	60%  { text-shadow: 0px 10px 4px #ffffff2f }
+	80%  { text-shadow: -5px 8px 3px #ffffff2f }
+	100%  { text-shadow: 1px 5px 1px #ffffff2f; }
+}
+
+
+.explosion-line > .explosion-inner > .explosion-line-inner {
+    position: absolute;
+    animation-name: expl-line;
+    animation-duration: 1.15s;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(255, 174, 0, 0.1);
+    border-radius: 8px;
+    opacity:1;
+    animation-fill-mode: forwards;
+}
+
+.explosion-line.left{transform: rotate(180deg) translate(100%, 100%);}
+.explosion-line.up{transform: rotate(-90deg) translate(100%, 0%);}
+.explosion-line.down{transform: rotate(90deg) translate(0, 100%);}
+.explosion-line.tr{transform: translate(20%, -50%) rotate(-45deg) ;}
+.explosion-line.dr{transform: translate(-50%, 20%) rotate(45deg) ;}
+.explosion-line.dl{transform: translate(-120%, -50%) rotate(135deg) ;}
+.explosion-line.ul{transform: translate(-50%,-120%) rotate(225deg) ;}
