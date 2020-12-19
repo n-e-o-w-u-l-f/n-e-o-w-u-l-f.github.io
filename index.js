@@ -1,6 +1,3 @@
-var x = document.getElementById("onkelz"); 
-x.play(); 
-
 function explode(target, size, xpos, ypos) {
     if (!size) size = 64;
     if (!xpos) xpos = 0;
