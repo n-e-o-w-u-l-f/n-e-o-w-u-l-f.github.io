@@ -97,7 +97,8 @@ h3:after {
 }
 
 .shadow {
-  animation: textshadow 8s infinite alternate; 
+  animation: textshadow 8s infinite alternate;
+  box-shadow: none;
 }       
 
 a {
@@ -269,5 +270,3 @@ a.youtube:hover {background: #CD201F; border-color: rgb(158, 22, 22); box-shadow
 .explosion-line.dr{transform: translate(-50%, 20%) rotate(45deg) ;}
 .explosion-line.dl{transform: translate(-120%, -50%) rotate(135deg) ;}
 .explosion-line.ul{transform: translate(-50%,-120%) rotate(225deg) ;}
-
-.shadow { box-shadow: none }
