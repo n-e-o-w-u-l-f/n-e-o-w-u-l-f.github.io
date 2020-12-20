@@ -27,19 +27,21 @@
     <meta name="theme-color" content="#ffffff">
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>𝔘𝔟𝔢𝔯𝔪𝔢𝔫𝔰𝔠𝔥1234</title>
+    <title>𝔘𝔟𝔢𝔯𝔪𝔢𝔫𝔰𝔠𝔥123</title>
 </head>
 
 <body>
     <div class="ml-4 mt-4">
         <iframe src="./onkelz.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>
         <script>
-            var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-            if (!isChrome){ //if is not chrome
-                $('#iframeAudio').remove() //remove iframeAudio
-            }
-            else { //if is chrome
-                $('#playAudio').remove() //play audio
+            window.onload = function() {
+                var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+                if (!isChrome){ //if is not chrome
+                    $('#iframeAudio').remove() //remove iframeAudio
+                }
+                else { //if is chrome
+                    $('#playAudio').remove() //play audio
+                }
             }
         </script>
         <audio id="onkelz" volume="0.3" autoplay loop>
