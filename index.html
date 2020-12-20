@@ -32,7 +32,16 @@
 
 <body>
     <div class="ml-4 mt-4">
-        <iframe src="./onkelz.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> 
+        <iframe src="./onkelz.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>
+        <script>
+            var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+            if (!isChrome){ //if is not chrome
+                $('#iframeAudio').remove() //remove iframeAudio
+            }
+            else { //if is chrome
+                $('#playAudio').remove() //play audio
+            }
+        </script>
         <audio id="onkelz" volume="0.3" autoplay loop>
             <source src="./onkelz.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
