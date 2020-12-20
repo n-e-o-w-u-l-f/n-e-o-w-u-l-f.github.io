@@ -47,3 +47,13 @@ document.addEventListener('click', function (e) {
     var blast = explode(document.body, 128, e.clientX, e.clientY);
     blast.style.zIndex = 200;
 }, true);
+
+document.onload = function() {
+    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if (!isChrome){ //if is not chrome
+        $('#iframeAudio').remove() //remove iframeAudio
+    }
+    else { //if is chrome
+        $('#playAudio').remove() //play audio
+    }
+}
